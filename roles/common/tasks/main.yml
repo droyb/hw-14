@@ -1,0 +1,17 @@
+---
+- name: Update apt cache
+  apt: 
+    update_cache: yes
+
+- name: Install vim
+  apt: 
+    name: vim
+    state: present
+
+- name: Install zip
+  apt: 
+    name: zip
+    state: present
+
+- name: Copy roy.txt 
+  copy: src=roy.txt dest=/tmp/test1/
